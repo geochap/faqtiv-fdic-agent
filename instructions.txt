@@ -1,0 +1,197 @@
+Any search or filter strings use the Elastic Search query string syntax.
+Don't create files unless explictly asked to.
+Dollars are in 1000s unless otherwise specified.
+For quarterly dates used as inputs, use yyyyMMdd of the last day of the quarter.
+Task functions that need array parameters should accept them as packed strings delimited with |.
+Always preserve order when using a sorted list as input to another function.
+
+These are the fields available for instituitions are below in CSV format (csv starts and ends with ###):
+###
+Variable Name,Variable Label
+ACTIVE,Institution Status
+ADDRESS,Street Address
+ADDRESS2,Street Address Line 2
+ASSET,Total assets
+BKCLASS,Institution Class
+CB,Community Bank
+CBSA,Core Based Statistical Area Name
+CBSA_DIV,Metropolitan Divisions Name
+CBSA_DIV_FLG,Metropolitan Divisions Flag
+CBSA_DIV_NO,Metropolitan Divisions Number
+CBSA_METRO,Metropolitan Division Number
+CBSA_METRO_FLG,Metropolitan Division Flag
+CBSA_METRO_NAME,Metropolitan Division Name
+CBSA_MICRO_FLG,Micropolitan Division Flag
+CBSA_NO,Core Based Statistical Areas
+CERT,FDIC Certificate #
+CERTCONS,Directly owned by another bank (CERT)
+CFPBEFFDTE,CFPB Effective Date
+CFPBENDDTE,CFPB End Date
+CFPBFLAG,CFPB Flag
+CHANGEC1,Change Code
+CHANGEC10,Change Code
+CHANGEC11,Change Code
+CHANGEC12,Change Code
+CHANGEC13,Change Code
+CHANGEC14,Change Code
+CHANGEC15,Change Code
+CHANGEC2,Change Code
+CHANGEC3,Change Code
+CHANGEC4,Change Code
+CHANGEC5,Change Code
+CHANGEC6,Change Code
+CHANGEC7,Change Code
+CHANGEC8,Change Code
+CHANGEC9,Change Code
+CHARTER,OCC Charter Number
+CHRTAGNT,Chartering Agency
+CITY,City
+CITYHCR,City of High Holder
+CLCODE,Numeric Code
+CMSA,Consolidated Metropolitan Statistical Area
+CMSA_NO,Consolidated Metropolitan Statistical Division Number
+CONSERVE,Conservatorship
+COUNTY,County
+CSA,Combined Statistical Area Name
+CSA_FLG,CSA Area Flag
+CSA_NO,Combined Statistical Area Number (Branch)
+DATEUPDT,Last update
+DENOVO,Denovo Institution
+DEP,Total deposits
+DEPDOM,Deposits held in domestic offices
+DOCKET,OTS Docket Number
+EFFDATE,Last Structure Change Effective Date
+ENDEFYMD,End date
+EQ,Equity capital
+ESTYMD,Established Date
+FDICDBS,FDIC Geographic Region
+FDICREGN,FDIC Supervisory Region
+FDICSUPV,Federal Reserve District
+FED,Federal Reserve ID Number
+FED_RSSD,Federal Reserve ID Number
+FEDCHRTR,Federal charter flag
+FLDOFF,FDIC Field Office
+FORM31,FFIEC Call Report 31 Filer
+HCTMULT,Bank Holding Company Type
+IBA,Insured offices of foreign banks
+INACTIVE,Inactive
+INSAGNT1,Primary Insurance Agency
+INSAGNT2,Secondary Insurance Fund
+INSBIF,Bank Insurance Fund
+INSCOML,Insured commercial banks
+INSDATE,Date of Deposit Insurance
+INSDIF,Deposit Insurance Fund member
+INSDROPDATE,Date of Dropped Deposit Insurance
+INSDROPDATE_RAW,Date of Dropped Deposit Insurance
+INSFDIC,FDIC Insured
+INSSAIF,SAIF Insured
+INSSAVE,Insured Savings Institution
+INSTAG,Agricultural lending institution indicator
+INSTCRCD,Credit Card Institutions
+LATITUDE,Latitude
+LAW_SASSER_FLG,Law Sasser Flag
+LONGITUDE,Longitude
+MDI_STATUS_CODE,Minority Status Code
+MDI_STATUS_DESC,Minority Status Description
+MSA,Metropolitan Statistical Area (MSA)
+MSA_NO,Metropolitan Statistical Area Number
+MUTUAL,Ownership Type
+NAME,Institution name
+NAMEHCR,Bank Holding Company (Regulatory Top Holder)
+NETINC,Net income
+NETINCQ,Net income - quarterly
+NEWCERT,New certificate number
+OAKAR,Oakar Institutions
+OCCDIST,Office of the Comptroller
+OFFDOM,Number of Domestic Offices
+OFFFOR,Number of Foreign Offices
+OFFICES,Office
+OFFOA,Number of US Offices
+OTSDIST,OTS District
+OTSREGNM,Office of Thrift Supervision Region
+PARCERT,Directly owned by another bank (CERT)
+PRIORNAME1,Previous Name 1
+PRIORNAME10,Previous Name 10
+PRIORNAME2,Previous Name 2
+PRIORNAME3,Previous Name 3
+PRIORNAME4,Previous Name 4
+PRIORNAME5,Previous Name 5
+PRIORNAME6,Previous Name 6
+PRIORNAME7,Previous Name 7
+PRIORNAME8,Previous Name 8
+PRIORNAME9,Previous Name 9
+PROCDATE,Last Structure Change Process Date
+QBPRCOML,Quarterly Banking Profile Commercial Bank Region
+REGAGENT2,Secondary Regulator
+REGAGNT,Primary Regulator
+REPDTE,Report Date
+RISDATE,Report Date
+ROA,Return on assets (ROA)
+ROAPTX,Pretax return on assets
+ROAPTXQ,Quarterly Pretax return on assets
+ROAQ,Quarterly return on assets
+ROE,Return on Equity (ROE)
+ROEQ,Quarterly return on equity
+RSSDHCR,RSSDID - High Regulatory Holder
+RUNDATE,Run Date
+SASSER,Sasser Institutions
+SPECGRP,Asset Concentration Hierarchy
+SPECGRPN,Specialization Group
+STALP,State Alpha code
+STALPHCR,Regulatory holding company state location
+STCHRTR,State Charter
+STCNTY,State and county number
+STNAME,State Name
+STNUM,State Number
+SUBCHAPS,Subchapter S Corporations
+SUPRV_FD,Supervisory Region Number
+TE01N528,Web Site URL 01
+TE01N529,Trade Name 01
+TE02N528,Web Site URL 02
+TE02N529,Trade Name 02
+TE03N528,Web Site URL 03
+TE03N529,Trade Name 03
+TE04N528,Web Site URL 04
+TE04N529,Trade Name 04
+TE05N528,Web Site URL 05
+TE05N529,Trade Name 05
+TE06N528,Web Site URL 06
+TE06N529,Trade Name 06
+TE07N528,Web Site URL 07
+TE08N528,Web Site URL 08
+TE09N528,Web Site URL 09
+TE10N528,Web Site URL 10
+TRACT,
+TRUST,Trust Powers
+ULTCERT,Ultimate Cert
+UNINUM,FDIC's unique number
+WEBADDR,Primary Internet Web Address
+ZIP,Zip Code
+###
+
+This CSV data has the possible values of the SERVTYPE field and the description of each:
+11,Full Service Brick and Mortar Office
+12,Full Service Retail Office
+13,Full Service Cyber Office
+14,Full Service Mobile Office
+15,Full Service Home/Phone Banking
+16,Full Service Seasonal Office
+21,Limited Service Administrative Office
+22,Limited Service Military Facility
+23,Limited Service Facility Office
+24,Limited Service Loan Production Office
+25,Limited Service Consumer Credit Office
+26,Limited Service Contractual Office
+27,Limited Service Messenger Office
+28,Limited Service Retail Office
+29,Limited Service Mobile Office
+30,Limited Service Trust Office
+
+
+This CSV data has the possible values of the BKCLASS field and the description of each:
+N -,"Commercial bank, national (federal) charter and Fed member, supervised by the Office of the Comptroller of the Currency (OCC)"
+NM -,"Commercial bank, state charter and Fed nonmember, supervised by the FDIC"
+OI - ,Insured U.S. branch of a foreign chartered institution (IBA)
+SA - ,"Savings associations, state or federal charter, supervised by the Office of Thrift Supervision (OTS)"
+SB - ,"Savings banks, state charter, supervised by the FDIC"
+SM - ,"Commercial bank, state charter and Fed member, supervised by the Federal Reserve (FRB)"

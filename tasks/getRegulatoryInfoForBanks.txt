@@ -1,0 +1,1 @@
+Get regulatory info for a list of specified bank ids.

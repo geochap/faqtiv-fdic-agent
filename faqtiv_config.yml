@@ -1,0 +1,15 @@
+runtime: python
+auto_add_examples: true
+modules:
+  - name: requests
+    alias: requests
+task_examples:
+  - getBanksByState
+  - getTopBanks
+  - getBanksByName
+  - getBanksWithBranchesInStates
+  - getBranchesByBankIds
+  - getBranchesByBankIdsInStates
+  - getLocationInfoForBanks
+  - getRegulatoryInfoForBanks
+  - getTopBanksFromBankList

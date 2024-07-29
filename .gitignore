@@ -1,0 +1,6 @@
+
+outputs/*
+.faqtiv/tmp/*
+.env
+
+venv/

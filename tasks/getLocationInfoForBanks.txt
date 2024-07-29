@@ -1,0 +1,1 @@
+Get location info for a list of specified bank ids.
