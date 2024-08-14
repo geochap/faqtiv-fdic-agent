@@ -10,5 +10,5 @@ def preserve_order(ids, data, key):
     Returns:
         list: A list of data dictionaries in the order of the given IDs.
     """
-    data_dict = {item[key]: item for item in data}
-    return [data_dict[id] for id in ids if id in data_dict]
+    data_dict = {str(item[key]): item for item in data}
+    return [data_dict[str(id)] for id in ids if str(id) in data_dict]
