@@ -22,8 +22,8 @@ def preserve_order(ids, data, key):
     Returns:
         list: A list of data dictionaries in the order of the given IDs.
     """
-    data_dict = {item[key]: item for item in data}
-    return [data_dict[id] for id in ids if id in data_dict]
+    data_dict = {str(item[key]): item for item in data}
+    return [data_dict[str(id)] for id in ids if str(id) in data_dict]
 
 
 ##
@@ -221,8 +221,8 @@ def get_banks_with_branches_in_list_of_states(state_codes):
 # This function is the generated code: it's safe to edit.
 ##
 
-def doTask(branch_ids: str):
+def doTask(bank_ids: str):
     import json
-    branch_id_list = list(map(int, branch_ids.split('|')))
-    branches = get_bank_branches(branch_id_list)
-    print(json.dumps(branches))
+    bank_id_list = list(map(int, bank_ids.split('|')))
+    branches_info = get_bank_branches(bank_id_list)
+    print(json.dumps(branches_info))
